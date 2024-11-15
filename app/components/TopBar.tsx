@@ -12,7 +12,7 @@ export function TopBar() {
   
     return (
       <div className="relative">
-        <div className="flex items-center justify-between bg-background p-4 text-textColor h-[72px] ">
+        <div className="flex items-center justify-between bg-background p-4 text-textColor h-20 ">
             <div>
                 <Image src='/logo.png' alt="logo" width={59} height={47} />
             </div>
@@ -26,8 +26,8 @@ export function TopBar() {
   
         {/* Mobile Menu */}
         {isMenuOpen && (
-            <div className="absolute top-0 left-0 right-0 z-10 bg-mobileView text-textColor">
-                <div className="flex items-center justify-between h-[72px] bg-black p-4 mb-48" >
+            <div className="absolute top-0 left-0 right-0 z-10 custom-gradient-bg text-textColor h-screen">
+                <div className="flex items-center justify-between h-20 bg-black p-4" >
                     <div>
                         <Image src='/logo.png' alt="logo" width={59} height={47} />
                     </div>
@@ -40,8 +40,8 @@ export function TopBar() {
                         </svg>
                     </div>
                 </div>
-                <div className="mb-[92px]" >
-                    <ul className="inline-flex flex-col justify-start gap-3.5 px-8 text-[40px] font-unbounded font-light">
+                <div className="flex flex-col justify-center items-center h-[calc(100%-80px)]" >
+                    <ul className="text-[40px] font-unbounded font-light space-y-3.5">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#events">Events</a></li>
@@ -50,11 +50,11 @@ export function TopBar() {
                         <li><a href="#suggestions">Suggestions</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                </div>
-                <div className="flex justify-center mb-[62px] ">
-                    <button className="rounded-[10px] text-black bg-textColor text-center font-unbounded text-2xl font-normal h-[64px] w-[348px]"> 
-                        JOIN US
-                    </button>
+                    <div className="mt-12">
+                        <button className="rounded-[10px] text-black bg-textColor text-center font-unbounded text-2xl font-normal h-[64px] w-[348px]"> 
+                            JOIN US
+                        </button>
+                    </div>
                 </div>
             </div>
         )}

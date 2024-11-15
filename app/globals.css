@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.custom-gradient-bg {
+    background: radial-gradient(
+      circle at bottom left,
+      #a795ff 30%, 
+      #E74C3C 50%,
+      #000000 70%
+    );
+    background-size: 200% 200%;
+    animation: smudge 10s ease infinite;
+  }
+  
+  @keyframes smudge {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
