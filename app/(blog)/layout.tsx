@@ -60,17 +60,24 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await sanityFetch({ query: settingsQuery });
-  const footer = data?.footer || [];
-  const { isEnabled: isDraftMode } = await draftMode();
+  // const data = await sanityFetch({ query: settingsQuery });
+  // const footer = data?.footer || [];
+  // const { isEnabled: isDraftMode } = await draftMode();
 
   return (
-    <html lang="en" className={`${inter.variable} bg-white text-black`}>
-      <body>
-        <section className="min-h-screen">
-          {isDraftMode && <AlertBanner />}
+    <html lang="en">
+      <head>
+        {/* Google Fonts link for Unbounded */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-unbounded">
+        {/* <section className="min-h-screen"> */}
+          {/* {isDraftMode && <AlertBanner />} */}
           <main>{children}</main>
-          <footer className="bg-accent-1 border-accent-2 border-t">
+          {/* <footer className="bg-accent-1 border-accent-2 border-t">
             <div className="container mx-auto px-5">
               {footer.length > 0 ? (
                 <PortableText
@@ -102,7 +109,7 @@ export default async function RootLayout({
           </footer>
         </section>
         {isDraftMode && <VisualEditing />}
-        <SpeedInsights />
+        <SpeedInsights /> */}
       </body>
     </html>
   );
