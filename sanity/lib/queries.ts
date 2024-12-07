@@ -32,3 +32,7 @@ export const postQuery = defineQuery(`
     ${postFields}
   }
 `);
+
+export const eventsQuery = defineQuery(`
+    *[_type == "event"]
+  `)

@@ -1,19 +1,7 @@
-import Link from 'next/link';
-import { Suspense } from 'react';
-
 import { TopBar } from '../components/TopBar';
 
-import Avatar from './avatar';
-import CoverImage from './cover-image';
-import DateComponent from './date';
-import MoreStories from './more-stories';
-import Onboarding from './onboarding';
-import PortableText from './portable-text';
-
-import type { HeroQueryResult } from '@/sanity.types';
-import * as demo from '@/sanity/lib/demo';
 import { sanityFetch } from '@/sanity/lib/fetch';
-import { heroQuery, settingsQuery } from '@/sanity/lib/queries';
+import { eventsQuery, settingsQuery } from '@/sanity/lib/queries';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Events from '../components/sections/Events';
@@ -93,19 +81,19 @@ import Events from '../components/sections/Events';
 // }
 
 export default async function Page() {
-	// const [settings, heroPost] = await Promise.all([
-	// 	sanityFetch({
-	// 		query: settingsQuery,
-	// 	}),
-	// 	sanityFetch({ query: heroQuery }),
-	// ]);
+	const [settings, events] = await Promise.all([
+		sanityFetch({
+			query: settingsQuery,
+		}),
+		sanityFetch({ query: eventsQuery }),
+	]);
 
 	return (
 		<>
 			<TopBar />
 			<Hero />
 			<About />
-			<Events />
+			<Events events={events} />
 		</>
 	);
 }
