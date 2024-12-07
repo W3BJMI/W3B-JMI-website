@@ -7,7 +7,7 @@ export default {
     extend: {
       fontFamily: {
         unbounded: ['Unbounded'],
-        sans: ['Inter'],
+        sans: ['Instrument Sans'],
       },
       colors: {
         background: "#15055A",

@@ -46,7 +46,7 @@ export default function Hero() {
 						className='min-h-[43svh]'
 					/>
 				</div>
-				<h4 className='uppercase font-unbounded text-4xl -top-7 relative leading-8 font-semibold'>
+				<h4 className='uppercase font-unbounded text-4xl -top-7 relative leading-8 font-medium'>
 					We <br />
 					Are
 				</h4>

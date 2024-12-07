@@ -62,6 +62,13 @@ export const unbounded = Unbounded({
 	display: 'swap',
 });
 
+export const instrument_sans = Instrument_Sans({
+	variable: '--font-instrument-sans',
+	weight: ['400', '500', '600', '700'],
+	subsets: ['latin'],
+	display: 'swap',
+});
+
 export default async function RootLayout({
 	children,
 }: {
