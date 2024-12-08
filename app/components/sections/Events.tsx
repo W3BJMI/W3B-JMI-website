@@ -15,7 +15,7 @@ export default function Events({ events }: EventsProps) {
 	return (
 		<section className='min-h-svh bg-slate-900 text-white px-5 space-y-20 py-10'>
 			<h3 className='uppercase font-unbounded text-3xl leading-8 font-medium text-center pt-10'>
-				What's <br />
+				What&apos;s <br />
 				<span className='italic'>Happening?</span>
 			</h3>
 			<div className='space-y-16 px-2'>
@@ -36,7 +36,9 @@ export default function Events({ events }: EventsProps) {
 								<h4 className='text-3xl font-medium leading-9 text-wrap w-4/5'>
 									{event.title}
 								</h4>
-								<p className='text-lg text-gray-300 font-sans tracking-tight'>{event.location}</p>
+								<p className='text-lg text-gray-300 font-sans tracking-tight'>
+									{event.location}
+								</p>
 								<p className='text-sm font-medium text-gray-500 font-sans'>
 									{event.date
 										? new Date(event.date).toLocaleDateString()
