@@ -1,13 +1,12 @@
 import '../globals.css';
 
-import { Inter, Unbounded } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({
 	variable: '--font-inter',
 	subsets: ['latin'],
 	display: 'swap',
 });
-
 
 export { metadata, viewport } from 'next-sanity/studio';
 

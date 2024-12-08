@@ -1,17 +1,8 @@
 import '../globals.css';
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import {
-	VisualEditing,
-	toPlainText,
-	type PortableTextBlock,
-} from 'next-sanity';
+import { toPlainText } from 'next-sanity';
 import { Inter, Unbounded, Instrument_Sans } from 'next/font/google';
-import { draftMode } from 'next/headers';
-
-import AlertBanner from './alert-banner';
-import PortableText from './portable-text';
 
 import * as demo from '@/sanity/lib/demo';
 import { sanityFetch } from '@/sanity/lib/fetch';
@@ -49,20 +40,20 @@ export async function generateMetadata(): Promise<Metadata> {
 	};
 }
 
-export const inter = Inter({
+const inter = Inter({
 	variable: '--font-inter',
 	subsets: ['latin'],
 	display: 'swap',
 });
 
-export const unbounded = Unbounded({
+const unbounded = Unbounded({
 	variable: '--font-unbounded',
 	weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
 	subsets: ['latin'],
 	display: 'swap',
 });
 
-export const instrument_sans = Instrument_Sans({
+const instrument_sans = Instrument_Sans({
 	variable: '--font-instrument-sans',
 	weight: ['400', '500', '600', '700'],
 	subsets: ['latin'],
@@ -77,7 +68,7 @@ export default async function RootLayout({
 	return (
 		<html lang='en'>
 			<head></head>
-			<body className='font-unbounded'>
+			<body className={unbounded.className}>
 				<main>{children}</main>
 			</body>
 		</html>

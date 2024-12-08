@@ -84,7 +84,9 @@ export default defineType({
       title: "Date",
       type: "datetime",
       initialValue: () => new Date().toISOString(),
-    }),
+      validation: (rule) => rule.required(),
+    },
+  ),
     defineField({
       name: "author",
       title: "Author",
