@@ -5,6 +5,7 @@ import { eventsQuery, settingsQuery } from '@/sanity/lib/queries';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Events from '../components/sections/Events';
+import Team from '../components/sections/Team';
 
 // function Intro(props: { title: string | null | undefined; description: any }) {
 // 	const title = props.title || demo.title;
@@ -94,6 +95,7 @@ export default async function Page() {
 			<Hero />
 			<About />
 			<Events events={events} />
+			<Team />
 		</>
 	);
 }

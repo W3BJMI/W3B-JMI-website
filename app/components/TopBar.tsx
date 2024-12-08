@@ -12,7 +12,7 @@ export function TopBar() {
 
 	return (
 		<div className='fixed w-full z-10'>
-			<div className='flex items-center justify-between bg-background p-4 text-textColor h-20 z-10'>
+			<div className='flex items-center justify-between bg-background p-4 text-textColor h-20 z-50'>
 				<div>
 					<Image
 						src='/logo.png'
@@ -48,7 +48,7 @@ export function TopBar() {
 
 			{/* Mobile Menu */}
 			{isMenuOpen && (
-				<div className='absolute top-0 left-0 right-0 z-10 custom-gradient-bg text-textColor h-screen'>
+				<div className='absolute top-0 left-0 right-0 z-50 custom-gradient-bg text-textColor h-screen'>
 					<div className='flex items-center justify-between h-20 bg-black p-4'>
 						<div>
 							<Image
