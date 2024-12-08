@@ -23,7 +23,7 @@ export default function Events({ events }: EventsProps) {
 					events.map((event) => (
 						<div
 							key={event.slug?.current}
-							className='relative min-h-[480px] p-8 rounded-3xl rounded-tr-[100px] rounded-bl-[100px] bg-cover bg-center transition-transform duration-300 group-hover:scale-110 overflow-hidden'
+							className='relative min-h-[480px] p-8 rounded-3xl rounded-tr-[100px] rounded-bl-[100px] bg-cover bg-center transition-transform duration-300 group-hover:scale-110 overflow-hidden space-y-2'
 							style={{
 								backgroundImage: `url(${urlFor(event.mainImage!).height(800).width(500).url()})`,
 							}}
@@ -36,8 +36,8 @@ export default function Events({ events }: EventsProps) {
 								<h4 className='text-3xl font-medium leading-9 text-wrap w-4/5'>
 									{event.title}
 								</h4>
-								<p className='text-sm text-gray-300'>{event.location}</p>
-								<p className='text-sm text-gray-500'>
+								<p className='text-lg text-gray-300 font-sans tracking-tight'>{event.location}</p>
+								<p className='text-sm font-medium text-gray-500 font-sans'>
 									{event.date
 										? new Date(event.date).toLocaleDateString()
 										: null}
